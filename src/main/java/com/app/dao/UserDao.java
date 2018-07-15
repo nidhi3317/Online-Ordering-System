@@ -19,7 +19,7 @@ public class UserDao implements UserDaoIntf {
 	}
 //storing user obj into tables
 	public int addUser(User u) {
-		User a=(User)sf.getCurrentSession().save(u);
-		return a.getId();
+		Integer a=(Integer)sf.getCurrentSession().save(u);
+		return a;
 	}
 }

@@ -19,7 +19,7 @@
 <table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
 <tr>
     <td align='center'>Name:</td>
-    <td><form:input type='text' path="name"/></td>
+    <td><form:input  path="name"/></td>
 </tr>
 <tr> <td>&nbsp;</td> </tr>
 
@@ -29,14 +29,15 @@
 </tr>
 <tr> <td>&nbsp;</td> </tr>
  -->
+ 
 <tr>
     <td align='center'>Password:</td>
-    <td><form:password type='text' path="pass"/></td>
+    <td><form:password  path="pass"/></td>
 </tr>
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>Email:</td>
-    <td><form:input  type='text' path="email"/></td>
+    <td><form:input  path="email"/></td>
 </tr>
 <tr> <td>&nbsp;</td> </tr>
 <!-- 
@@ -62,7 +63,7 @@
 <tr>
     <td align='center'><input type='submit' name='signup' value="SIGN UP"></td>
 </tr> 
-</table>
+
 </table>
   </fieldset>
   </form:form>
