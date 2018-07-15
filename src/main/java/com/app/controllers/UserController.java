@@ -39,7 +39,7 @@ public class UserController {
 		try {
 		 User validUser=service.validateUser(u.getEmail(),u.getPass());
 		 //valid login
-		 return "redirect:/Welcomeuser"; //home welcome page 
+		 return "Welcomeuser"; //home welcome page 
 		} catch (NoResultException e) {
 			//invalid login
 			map.addAttribute("message", "Invalid Login , Pls retry...");
