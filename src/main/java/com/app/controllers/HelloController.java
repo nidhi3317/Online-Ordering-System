@@ -11,6 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller // mandatory
 public class HelloController {
+	@RequestMapping("/") // mandatory
+	 public String sayHello2() {
+		System.out.println("in say hello");
+		return "login";
+	}
 	public HelloController() {
 		System.out.println("in hello controller");
 	}
@@ -37,7 +42,7 @@ public class HelloController {
 			map.addAttribute("num_list", Arrays.asList(1,2,3,4,5));
 			map.addAttribute("server_date", new Date());
 			System.out.println(map);
-			return "welcome";
+			return "Signin";
 		}
 
 }
