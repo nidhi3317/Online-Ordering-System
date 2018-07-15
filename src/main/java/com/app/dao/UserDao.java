@@ -17,5 +17,9 @@ public class UserDao implements UserDaoIntf {
 		return sf.getCurrentSession().createQuery(jpql, User.class).setParameter("em", em1).setParameter("pass", pass1)
 				.getSingleResult();
 	}
-
+//storing user obj into tables
+	public int addUser(User u) {
+		User a=(User)sf.getCurrentSession().save(u);
+		return a.getId();
+	}
 }

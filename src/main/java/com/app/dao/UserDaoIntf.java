@@ -4,4 +4,6 @@ import pojos.User;
 
 public interface UserDaoIntf {
 	User validateUser(String em,String pass);
+	
+	int addUser(User u);
 }

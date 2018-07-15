@@ -20,5 +20,10 @@ public class UserService implements UserServiceIntf {
 		
 		return dao.validateUser(em, pass);
 	}
+	@Override
+	public int addUser(User u) {
+		// TODO Auto-generated method stub
+		return dao.addUser(u);
+	}
 
 }

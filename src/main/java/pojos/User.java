@@ -11,21 +11,30 @@ import java.util.Date;
 public class User {
 	private Integer id;
 	private String email;
+	private String name;
+	
+	@Column
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	private String  pass;
-	private double regAmount;
-	private Date regDate;
+	
 
 	// def constr
 	public User() {
 		System.out.println("in user constr");
 	}
 
-	public User(String email, String pass, double regAmount, Date regDate) {
+	public User(String email, String pass,String name) {
 		super();
 		this.email = email;
 		this.pass = pass;
-		this.regAmount = regAmount;
-		this.regDate = regDate;
+		this.name= name;
 	}
 
 	@Id
@@ -56,29 +65,10 @@ public class User {
 		this.pass = pass;
 	}
 
-	@Column(name = "reg_amt")
-	public double getRegAmount() {
-		return regAmount;
-	}
-
-	public void setRegAmount(double regAmount) {
-		this.regAmount = regAmount;
-	}
-
-	@Column(name = "reg_date")
-	@Temporal(TemporalType.DATE)
-	public Date getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", pass=" + pass + ", regAmount=" + regAmount + ", regDate="
-				+ regDate + "]";
+		return "User [id=" + id + ", email=" + email + ", pass=" + pass + "]";
 	}
 
 }

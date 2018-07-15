@@ -16,8 +16,8 @@
 			Enter Username: <input type="text" name="uname" placeholder="Enter the User Name"/>	<br>
 			
 			Enter Password:	<input type="password" name="ppassword" placeholder="password"/><br>
-			<input type="submit" type="submit" name="login" value="LOG IN" />
-			<h4>New here?<a href="Signin.jsp">Sign up</a></h4>
+			<input type="submit" type="submit" name="login" value="LOG IN"  />
+			<h4>New here?<a href="signup">Sign up</a></h4>  
 	  </fieldset>
 </form>
 </body>

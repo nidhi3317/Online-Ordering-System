@@ -11,10 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller // mandatory
 public class HelloController {
-	@RequestMapping("/") // mandatory
+	@RequestMapping("/abc") // mandatory
 	 public String sayHello2() {
 		System.out.println("in say hello");
-		return "login";
+		return "Login";
 	}
 	public HelloController() {
 		System.out.println("in hello controller");
@@ -36,8 +36,8 @@ public class HelloController {
 				"server_date", new Date());
 	}
 	// o.s.ui.Model --i/f --holder of model attrs --map 
-		@RequestMapping("/hello2") // mandatory
-		public String sayHello2(Model map) {
+		@RequestMapping("/hello2") // mandatory  //send link you wan to go
+		public String sayHello3(Model map) {
 			System.out.println("in say hello2 "+map);
 			map.addAttribute("num_list", Arrays.asList(1,2,3,4,5));
 			map.addAttribute("server_date", new Date());
