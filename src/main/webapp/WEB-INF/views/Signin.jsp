@@ -8,7 +8,7 @@
 <title>SIGN UP</title>
 </head>
 <body>
-<form:form method="post" modelAttribute="my_user">
+<form:form method="post" modelAttribute="my_user1">
 
   <!-- fieldsets -->
   <fieldset>

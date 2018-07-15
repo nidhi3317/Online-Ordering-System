@@ -52,20 +52,20 @@ public class UserController {
 	public String showSignForm(Model map) {
 
 		System.out.println("in show signup form "+map);
-		map.addAttribute("my_user", new User());
+		map.addAttribute("my_user1", new User());
 		return "Signin";
 		
 	}
 	
 	@PostMapping("/signup")
-	public String processSignupForm(@ModelAttribute(name="my_user") User u,Model map)
+	public String processSignupForm(@ModelAttribute(name="my_user1") User u,Model map)
 	{
 		System.out.println("in process login form ");
 		//invoke service layer method for user validation
 		try {
 		int id=service.addUser(u);
 		 //valid login
-		 return "Login"; //home welcome page 
+		 return "Welcomeuser"; //home welcome page 
 		} catch (NoResultException e) {
 			//invalid login
 			map.addAttribute("message", "Invalid Login , Pls retry...");
